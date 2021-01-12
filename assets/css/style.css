@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1E2D3B;
+  min-height: 100vh;
+  color: white
+}
+
+header {
+  height: 80px;
+  background-color: black;
+}

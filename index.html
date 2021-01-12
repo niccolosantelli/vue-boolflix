@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="app">
+  <header>
+    <section>
+      <div class="">
+
+      </div>
+      <div class="">
+          <input v-model="searchTerm" @keyup.enter="getData()" type="text"  name="" value="" placeholder="enter a film">
+        </form>
+      </div>
+    </section>
+  </header>
+
+  <main>
+   <div class="">
+     <ul v-for="document in filmDocuments" >
+       <li>{{document.title}}</li>
+       <li>{{document.original_title}}</li>
+       <li>{{document.original_language}}</li>
+       <li>{{document.vote_average}}</li>
+     </ul>
+   </div>
+  </main>
+
+</div>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="assets/js/main.js" charset="utf-8"></script>
+</body>
+</html>
