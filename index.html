@@ -29,7 +29,9 @@
    <div class="">
      <ul v-for="document in filmDocuments" >
        <li>{{document.title}}</li>
+       <li>{{document.name}}</li>
        <li>{{document.original_title}}</li>
+       <li>{{document.original_name}}</li>
        <li>
          <img v-if="document.original_language == 'en' " src="assets/img/download.png" alt="">
          <img v-else-if="document.original_language == 'it' " src="assets/img/ita.png" alt="">
