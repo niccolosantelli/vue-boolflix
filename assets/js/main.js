@@ -3,6 +3,8 @@ let app = new Vue({
   data: {
   searchTerm: "",
   filmDocuments: [],
+
+
 },
 
 methods:{
@@ -18,9 +20,16 @@ methods:{
     let ritorno = response.data.results
     this.filmDocuments = ritorno
     console.log(ritorno);
-    let defoultNumber = response.data.vote_average
+
+     this.filmDocuments.forEach(item => {
+       const vote = Math.ceil(item.vote_average / 2)
+       console.log(vote);
+       return item.stellePiene = vote;      
+     });
+
+
 
     })
    }
   }
-}),
+})
