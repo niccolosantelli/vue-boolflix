@@ -27,6 +27,14 @@ methods:{
            console.log(vote);
            return item.stellePiene = vote;
          });
+
+         this.filmDocuments.forEach(item =>{
+           const size = "w342"
+           const post = "https://image.tmdb.org/t/p/" + size + item.poster_path
+           console.log(post);
+           return item.poster = post
+         })
+
         })
 
 
@@ -47,7 +55,18 @@ methods:{
             const vote = Math.ceil(item.vote_average / 2)
             console.log(vote);
             return item.stellePiene = vote;
-          });
+          })
+
+          this.tvSeriesDocuments.forEach(item =>{
+            const size = "w342"
+            const post = "https://image.tmdb.org/t/p/" + size + item.poster_path
+            console.log(post);
+            return item.poster = post
+          })
+
+
+
+
         })
 
 

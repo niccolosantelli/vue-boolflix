@@ -31,15 +31,16 @@
        <li>{{document.title}}</li>
        <li>{{document.original_title}}</li>
        <li>
-         <img v-if="document.original_language == 'en' " src="assets/img/download.png" alt="">
-         <img v-else-if="document.original_language == 'it' " src="assets/img/ita.png" alt="">
-         <img v-else-if="document.original_language == 'ja' " src="assets/img/jp.png" alt="">
+         <img class="flag" v-if="document.original_language == 'en' " src="assets/img/download.png" alt="">
+         <img class="flag" v-else-if="document.original_language == 'it' " src="assets/img/ita.png" alt="">
+         <img class="flag" v-else-if="document.original_language == 'ja' " src="assets/img/jp.png" alt="">
          <p v-else>lingua: {{document.original_language}} </p>
        </li>
        <li>
          <i v-for="stella in document.stellePiene" class="fas fa-star"></i>
          <i v-for="stella in (5 - document.stellePiene)" class="far fa-star"></i>
        </li>
+       <img :src="document.poster" alt="">
      </ul>
    </div>
 
@@ -49,15 +50,17 @@
        <li>{{document.name}}</li>
        <li>{{document.original_name}}</li>
        <li>
-         <img v-if="document.original_language == 'en' " src="assets/img/download.png" alt="">
-         <img v-else-if="document.original_language == 'it' " src="assets/img/ita.png" alt="">
-         <img v-else-if="document.original_language == 'ja' " src="assets/img/jp.png" alt="">
+         <img class="flag" v-if="document.original_language == 'en' " src="assets/img/download.png" alt="">
+         <img class="flag" v-else-if="document.original_language == 'it' " src="assets/img/ita.png" alt="">
+         <img class="flag" v-else-if="document.original_language == 'ja' " src="assets/img/jp.png" alt="">
          <p v-else>lingua: {{document.original_language}} </p>
        </li>
        <li>
          <i v-for="stella in document.stellePiene" class="fas fa-star"></i>
          <i v-for="stella in (5 - document.stellePiene)" class="far fa-star"></i>
        </li>
+       <img  :src="document.poster" alt="">
+       
      </ul>
 
    </div>
