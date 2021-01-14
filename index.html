@@ -26,23 +26,40 @@
   </header>
 
   <main>
-   <div class="">
+   <div class="film_section">
      <ul v-for="document in filmDocuments" >
        <li>{{document.title}}</li>
-       <li>{{document.name}}</li>
        <li>{{document.original_title}}</li>
-       <li>{{document.original_name}}</li>
        <li>
          <img v-if="document.original_language == 'en' " src="assets/img/download.png" alt="">
          <img v-else-if="document.original_language == 'it' " src="assets/img/ita.png" alt="">
          <img v-else-if="document.original_language == 'ja' " src="assets/img/jp.png" alt="">
-         <img v-else src="assets/img/not.png" alt="">
+         <p v-else>lingua: {{document.original_language}} </p>
        </li>
        <li>
          <i v-for="stella in document.stellePiene" class="fas fa-star"></i>
          <i v-for="stella in (5 - document.stellePiene)" class="far fa-star"></i>
        </li>
      </ul>
+   </div>
+
+
+   <div class="tvseries_section">
+     <ul v-for="document in tvSeriesDocuments" >
+       <li>{{document.name}}</li>
+       <li>{{document.original_name}}</li>
+       <li>
+         <img v-if="document.original_language == 'en' " src="assets/img/download.png" alt="">
+         <img v-else-if="document.original_language == 'it' " src="assets/img/ita.png" alt="">
+         <img v-else-if="document.original_language == 'ja' " src="assets/img/jp.png" alt="">
+         <p v-else>lingua: {{document.original_language}} </p>
+       </li>
+       <li>
+         <i v-for="stella in document.stellePiene" class="fas fa-star"></i>
+         <i v-for="stella in (5 - document.stellePiene)" class="far fa-star"></i>
+       </li>
+     </ul>
+
    </div>
   </main>
 
