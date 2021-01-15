@@ -44,13 +44,14 @@
            <i v-for="stella in document.stellePiene" class="fas fa-star"></i>
            <i v-for="stella in (5 - document.stellePiene)" class="far fa-star"></i>
            </p>
+           <p>Overview: {{document.overview}}</p>
 
            </div>
        </div>
 
 
        <img v-if="document.poster" :src="document.poster" alt="">
-       <img v-else src="assets/img/place.png" alt="">
+       <img v-else src="assets/img/place.png" id="img_not" alt="">
      </div>
    </div>
 

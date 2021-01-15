@@ -46,6 +46,7 @@ input{
   border: 2px solid white;
   border-radius: 3px;
   padding: 10px;
+  margin-right: 28px;
 }
 
 .film_section{
@@ -56,6 +57,7 @@ input{
   height: 515px;
   position: relative;
   margin: 5px;
+  border: 1px solid white;
 }
 
 #film .card_film:hover .overlay{
@@ -73,6 +75,11 @@ input{
 }
 
 #film .info_box{
-  margin-top: 50px;
-  margin-left: 30px
+  height: 100%;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#img_not{
+  width: 342px;
 }
