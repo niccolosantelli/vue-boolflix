@@ -14,35 +14,44 @@
 
 <div id="app">
   <header>
-    <section>
-      <div class="">
-
-      </div>
-      <div class="">
-          <input v-model="searchTerm" @keyup.enter="getData()" type="text"  name="" value="" placeholder="enter a film">
-        </form>
+    <section >
+      <div class="navbar">
+        <div class="">
+          <img class="boolflix_img" src="assets/img/boolflix.png" alt="">
+        </div>
+        <div class="">
+            <input v-model="searchTerm" @keyup.enter="getData()" type="text"  name="" value="" placeholder="cerca">
+          </form>
+        </div>
       </div>
     </section>
   </header>
 
   <main>
-   <div class="film_section">
-     <ul v-for="document in filmDocuments" >
-       <li>{{document.title}}</li>
-       <li>{{document.original_title}}</li>
-       <li>
-         <img class="flag" v-if="document.original_language == 'en' " src="assets/img/download.png" alt="">
-         <img class="flag" v-else-if="document.original_language == 'it' " src="assets/img/ita.png" alt="">
-         <img class="flag" v-else-if="document.original_language == 'ja' " src="assets/img/jp.png" alt="">
-         <p v-else>lingua: {{document.original_language}} </p>
-       </li>
-       <li>
-         <i v-for="stella in document.stellePiene" class="fas fa-star"></i>
-         <i v-for="stella in (5 - document.stellePiene)" class="far fa-star"></i>
-       </li>
+  <div class="bloccocentro">
+   <div id="film" class="film_section">
+     <div class="card_film" v-for="document in filmDocuments" >
+       <div class="overlay">
+         <div class="info_box">
+         <p>Titolo: {{document.title}}</p>
+         <p>Titolo originale: {{document.original_title}}</p>
+         <p>Lingua:</p>
+           <img class="flag" v-if="document.original_language == 'en' " src="assets/img/download.png" alt="">
+           <img class="flag" v-else-if="document.original_language == 'it' " src="assets/img/ita.png" alt="">
+           <img class="flag" v-else-if="document.original_language == 'ja' " src="assets/img/jp.png" alt="">
+           <p v-else>lingua: {{document.original_language}} </p>
+           <p> Voto:
+           <i v-for="stella in document.stellePiene" class="fas fa-star"></i>
+           <i v-for="stella in (5 - document.stellePiene)" class="far fa-star"></i>
+           </p>
+
+           </div>
+       </div>
+
+
        <img v-if="document.poster" :src="document.poster" alt="">
        <img v-else src="assets/img/place.png" alt="">
-     </ul>
+     </div>
    </div>
 
 
@@ -63,6 +72,7 @@
        <img v-if="document.poster" :src="document.poster" alt="">
        <img v-else src="assets/img/place.png" alt="">
      </ul>
+   </div>
 
    </div>
   </main>

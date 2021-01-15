@@ -19,3 +19,60 @@ header {
  .flag{
   height: 20px
 }
+
+.navbar{
+  margin: auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bloccocentro{
+  margin: auto;
+  width: 80%;
+}
+
+.boolflix_img{
+  height: 60px;
+  margin-top: 10px;
+}
+
+input{
+  margin-top: 27px;
+  height: 25px;
+  font-size: 15px;
+  outline: none;
+  padding: 5px;
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.film_section{
+  display: flex;
+  flex-wrap: wrap;
+}
+.card_film{
+  height: 515px;
+  position: relative;
+  margin: 5px;
+}
+
+#film .card_film:hover .overlay{
+  display: block;
+  cursor: pointer;
+}
+#film .overlay{
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+
+#film .info_box{
+  margin-top: 50px;
+  margin-left: 30px
+}
