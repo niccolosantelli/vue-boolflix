@@ -40,12 +40,13 @@
          <i v-for="stella in document.stellePiene" class="fas fa-star"></i>
          <i v-for="stella in (5 - document.stellePiene)" class="far fa-star"></i>
        </li>
-       <img :src="document.poster" alt="">
+       <img v-if="document.poster" :src="document.poster" alt="">
+       <img v-else src="assets/img/place.png" alt="">
      </ul>
    </div>
 
 
-   <div class="tvseries_section">
+    <div class="tvseries_section">
      <ul v-for="document in tvSeriesDocuments" >
        <li>{{document.name}}</li>
        <li>{{document.original_name}}</li>
@@ -59,8 +60,8 @@
          <i v-for="stella in document.stellePiene" class="fas fa-star"></i>
          <i v-for="stella in (5 - document.stellePiene)" class="far fa-star"></i>
        </li>
-       <img  :src="document.poster" alt="">
-       
+       <img v-if="document.poster" :src="document.poster" alt="">
+       <img v-else src="assets/img/place.png" alt="">
      </ul>
 
    </div>

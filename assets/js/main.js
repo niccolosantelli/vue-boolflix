@@ -5,7 +5,6 @@ let app = new Vue({
   filmDocuments: [],
   tvSeriesDocuments:[],
 
-
 },
 
 methods:{
@@ -28,12 +27,26 @@ methods:{
            return item.stellePiene = vote;
          });
 
-         this.filmDocuments.forEach(item =>{
+         /*this.filmDocuments.forEach(item =>{
            const size = "w342"
            const post = "https://image.tmdb.org/t/p/" + size + item.poster_path
            console.log(post);
            return item.poster = post
+         })*/
+
+         this.filmDocuments.forEach(item => {
+           const base = "https://image.tmdb.org/t/p/w342";
+           const linkCopertina = item.poster_path;
+           if (item.poster_path) {
+             return item.poster = base + linkCopertina;
+           }else {
+             return item.poster = linkCopertina;
+           }
+
+
+
          })
+
 
         })
 
@@ -57,18 +70,25 @@ methods:{
             return item.stellePiene = vote;
           })
 
-          this.tvSeriesDocuments.forEach(item =>{
+          /*this.tvSeriesDocuments.forEach(item =>{
             const size = "w342"
             const post = "https://image.tmdb.org/t/p/" + size + item.poster_path
             console.log(post);
             return item.poster = post
+          })*/
+
+          this.tvSeriesDocuments.forEach(item => {
+            const base = "https://image.tmdb.org/t/p/w342";
+            const linkCopertina = item.poster_path;
+            if (item.poster_path) {
+              return item.poster = base + linkCopertina
+            } else {
+              return item.poster = linkCopertina
+            }
+
           })
 
-
-
-
         })
-
 
     }
   }
