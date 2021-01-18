@@ -49,22 +49,22 @@ input{
   margin-right: 28px;
 }
 
-.film_section{
+.film_section, .tvseries_section{
   display: flex;
   flex-wrap: wrap;
 }
-.card_film{
+.card_film, .card_series{
   height: 515px;
   position: relative;
   margin: 5px;
   border: 1px solid white;
 }
 
-#film .card_film:hover .overlay{
+#film .card_film:hover .overlay, #series .card_series:hover .overlay{
   display: block;
   cursor: pointer;
 }
-#film .overlay{
+#film .overlay, #series .overlay{
   display: none;
   width: 100%;
   height: 100%;
@@ -74,7 +74,7 @@ input{
   background-color: black;
 }
 
-#film .info_box{
+#film .info_box, #series .info_box{
   height: 100%;
   padding: 20px;
   overflow-y: auto;
